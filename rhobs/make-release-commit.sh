@@ -94,7 +94,7 @@ change_api_group() {
 		-o -path "./rhobs" \) -prune -o \
 		-type f -exec \
 		sed -i \
-		-e 's|monitoring.coreos.com|monitoring.rhobs|g' \
+                -e 's|\([^#]\)monitoring.coreos.com|\1monitoring.rhobs|g' \
 		-e 's|+kubebuilder:resource:categories="prometheus-operator".*|+kubebuilder:resource:categories="rhobs-prometheus-operator"|g' \
 		-e 's|github.com/prometheus-operator/prometheus-operator|github.com/rhobs/obo-prometheus-operator|g' \
 		{} \;
