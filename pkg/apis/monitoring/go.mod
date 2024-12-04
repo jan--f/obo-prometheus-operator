@@ -1,8 +1,8 @@
 module github.com/prometheus-operator/prometheus-operator/pkg/apis/monitoring
 
-go 1.23
+go 1.22
 
-toolchain go1.23.1
+toolchain go1.22.7
 
 require (
 	k8s.io/api v0.31.2
